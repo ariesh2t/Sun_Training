@@ -1,0 +1,160 @@
+diferrences git diff commands:
+git diff: stage vs working dir
+git diff --staged: HEAD vs staged
+git diff HEAD: HEAD vs working dir
+
+=======================
+git reset HEAD~<so lan muon quay ve>: reset ve <so lan muon quay ve> ko lam mat du lieu va unstaged
+git --soft reset HEAD~<sso lan muon quay ve>: reset ve <so lan muon quay ve> nhung van luu thay doi trong staged
+git --hard reset HEAD~<so lan muon quay ve> : reset ve <so lan muon quay ve> va xoa luon file
+
+Git ignore:
+*.a
+!data.txt
+/TODO -> ignore file "TODO" name
+build/ -> all files/folders in side
+doc/*.txt
+doc/*/*.txt -> children filess /folders *.txt
+doc/**/*.txt -> all files inside doc .*txt
+
+
+=======================
+Short Status:
+git status -s / --short
+
+Remove file in working dir:
+rm <file_name>
+git rm --cached <file_name>
+
+=> git rm <file_name>
+
+check out a file:
+git checkout -- <file_name>
+
+
+=======branch===========
+git branch : show all branch
+git branch -v : show all branch detail
+git branch --merged: list all branchs haven't yet merge
+git branch --no-merged: list all branchs alreally merge
+git branch -d: delete branch
+git checkout -b topic: create + switch to "topic" branch
+
+=======remote===========
+Showing Your Remotes
+$ git remote -v
+Adding Remote Repositories
+$ git remote add pb https://github.com/paulboone/ticgit
+Fetching and Pulling from Your Remotes
+$ git fetch [remote-name]
+Pushing to Your Remotes
+$ git push origin master
+Inspecting a Remote
+$ git remote show origin
+Removing and Renaming Remotes
+$ git remote rename pb paul
+
+=======tag============
+Listing Your Tags
+$ git tag
+Annotated Tags
+$ git tag -a v1.4 -m "my version 1.4"
+Lightweight Tags
+$ git tag v1.4-lw
+Tagging Later
+$ git tag -a v1.2 9fceb02
+$ git show v1.2
+Sharing Tags
+$ git push origin --tags
+Checking out Tags
+$ git checkout -b version2 v2.0.0
+
+============Aliases===========
+git config --global alias.co checklout
+git config --global alias.unstage 'reset HEAD --'
+
+
+============Fetch===========
+git config --global alias.co checklout
+git config --global alias.unstage 'reset HEAD --'
+
+
+git push origin work1:develop
+
+
+git pull teamone master
+
+=====TEST======
+
+------------------------------------------------
+|          | working dir | staged index | HEAD |
+------------------------------------------------
+| diff     |     yes     |    yes       |      |
+------------------------------------------------
+| --staged |             |    yes       | yes  |
+------------------------------------------------
+| HEAD     |     yes     |              | yes  |
+------------------------------------------------
+Figure 1: git diff ...
+
+
+1/ mising add these files:
+git commit --amend
+2/ show help:
+git help
+3/ diff between working dir and stage:
+git diff
+4/ Khi đang ở nhánh develop, ghép nhánh br1 vào nhánh develop
+git merge br1
+5/ show log commit:
+git log
+6/ show log oneline:
+git log --oneline
+7/ Nội dung của tệp stage trở về HEAD
+git reset
+8/ Chỉ định tệp rồi hiển thị nhật ký
+git log abc.txt
+9/ Xem sự khác biệt giữa các commit
+git diff commit_ID_1 commit_ID_2
+10/ Xóa tệp khỏi stage
+git rm --cached foo.txt
+11/ Tạo và chuyển đến nhánh br1
+git checkout -b br1
+12/ Thay đổi tên tệp
+git mv foo.txt bar.txt
+13/ Nội dung của nhánh làm việc trở về HEAD
+git reset
+14/ Sao chép kho truy cập từ xa（git@github.com:framgia/proj.git） vào local
+git clone git@github.com:framgia/proj.git
+15/ Commit tệp staging
+git commit
+16/ Xem nhật ký thao tác
+git reflog
+17/ Chuyển đến 1 nhánh khác
+git checkout br1
+18/ Đẩy nhánh work1 của kho local vào nhánh develop của kho truy cập từ xa origin
+git push origin work1:develop
+19/ Xem nội dung của thay đổi
+git status
+20/ Xem sự khác biệt giữa nhánh đang làm việc và HEAD
+git diff HEAD
+21/ Xóa tệp
+git rm foo.txt
+22/ Chỉ staging foo.txt
+git add foo.txt
+23/ Kiểm tra thiết lập
+git config -l
+24/ Xem trạng thái của kho lưu trữ
+git status
+25/ Khi đang ở nhánh work1, rebase nhánh work1 theo HEAD của nhánh develop
+git rebase develop
+26/ Xóa nhánh work1
+git branch -d work1
+27/ Kéo nhánh develop của kho truy cập từ xa origin về nhánh work1 của kho local origin
+git pull origin develop:work1
+28/ Đăng ký kho truy cập từ xa
+git remote add repo1
+29/ Xem danh sách các nhánh
+git branch
+30/ Xem sự khác biệt giữa HEAD và stage
+git diff --stageddd
