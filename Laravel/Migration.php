@@ -16,7 +16,8 @@ php artisan migrate:rollback --step=5 (khoi phuc 5 lan di chuyen cuoi cung)
 php artisan migrate:reset
 * Refresh migrate:
 php artisan migrate:refresh (rollback all migrate va chay lai migrate)
-
+* Fresh migrate:
+php artisan migrate:fresh (Drop cac bang)
 * Create table
 Schema::create('table_name',function () {
     $table->increments('id');                       => id la so nguyen, khoa chinh, tu tang
@@ -67,31 +68,14 @@ Schema::table('users', function (Blueprint $table) {
 });
 
 * Foreign Key Constraints
-public function up()
-{
-    Schema::create('categories', function (Blueprint $table) {
-        $table->increments('cat_id');
-        $table->string('cat_name')->unique();
-        $table->string('cat_desc')->nullable();
-        $table->timestamps();
-    });
-}
++ create
+$table->foreign('cat_id')->references('cat_id')->on('categories')->onDelete('cascade');
++ drop
+$table->dropForeign('posts_user_id_foreign');
+$table->dropForeign(['user_id']);           => drop mang khoa ngoai
 
-pulic function up()
-{
-    Schema::create('products', function (Blueprint $table) {
-        $table->increments('product_id');
-        $table->string('product_name');
-        $table->string('product_desc')->nullable();
-        $table->mediumInteger('price');
-        $table->mediumInteger('amount');
-        $table->integer('cat_id')->unsigned();
-        $table->foreign('cat_id')->references('cat_id')->on('categories')->onDelete('cascade');
-        $table->timestamps();
-    });
-}
-
-* Seeder
+* Seeder: Gieo du lieu that
++ Chi co 1 phuong thuc run
 Tao class ben ngoai
 class catSeeder extends Seeder {
     public function run(){
@@ -107,4 +91,7 @@ $this->call([
     catSeeder::class,
     productSeeder::class,
 ]);
+
+* Factory: Gieo du lieu hang loat
+* Faker: Thu vien tao giu lieu gia
 
