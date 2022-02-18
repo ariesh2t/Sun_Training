@@ -23,3 +23,4 @@ Tao ra container khi thuc thi image nhat dinh
 
 - Docker-compose
 +
+ajksbfugaf
