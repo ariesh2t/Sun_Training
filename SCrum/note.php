@@ -49,7 +49,11 @@ Agile linh hoat hon, cho phep de dang dap ung su thay doi
     . Su tap trung: 
     . Tinh cam ket: cam ket hoan thanh muc tieu dat ra
     . Ton trong:
+<<<<<<< HEAD
     . Coi mo:
+=======
+    . Coi mo, 
+>>>>>>> 15b0ee6... commit
 + Empiricism
     . Tinh minh bach: minh bach ve thong tin, thay doi trong du an
     . Kiem tra va giam sat: to chuc meeting: review demo san pham
@@ -71,6 +75,7 @@ Agile linh hoat hon, cho phep de dang dap ung su thay doi
     . Daily Scrums: 15min daily
     . Sprint Review: 1h*week
     . Sprint Retrospective: .75h*week
+<<<<<<< HEAD
 + SCrum team: 
     . Product owner: la 1 nguoi/khach hang, tao product backlog (danh sach chuc nag
     can phai lam)
@@ -82,5 +87,8 @@ Agile linh hoat hon, cho phep de dang dap ung su thay doi
     . Planning: 
         Tra loi cau hoi: lam gi va tai sao lai lam cv do
         developer: tra loi cau hoi lam nhu the nao
+=======
+
+>>>>>>> 15b0ee6... commit
 
 -->
