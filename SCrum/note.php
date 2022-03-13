@@ -1,4 +1,5 @@
 <!-- 
+
 6 buoc phat trien phan mem
 - lap ke hoach
 - phan tich
@@ -6,6 +7,10 @@
 - thuc hien & xay dung
 - kiem thu
 - bao tri
+
+Agile la tu tuong de phat trien phan mem linh hoat, trong do bao gom 4 core value, 12 principle
+Scrum la framework ap dung Agile
+Agile co sau Scrum
 
 Su khac nhau giua mo hinh truyen thong va Agile
 - Waterfall: lam 1 chu ky va trai dai tu dau den cuoi du an
@@ -44,7 +49,7 @@ Agile linh hoat hon, cho phep de dang dap ung su thay doi
     . Su tap trung: 
     . Tinh cam ket: cam ket hoan thanh muc tieu dat ra
     . Ton trong:
-    . Coi mo, 
+    . Coi mo:
 + Empiricism
     . Tinh minh bach: minh bach ve thong tin, thay doi trong du an
     . Kiem tra va giam sat: to chuc meeting: review demo san pham
@@ -66,6 +71,16 @@ Agile linh hoat hon, cho phep de dang dap ung su thay doi
     . Daily Scrums: 15min daily
     . Sprint Review: 1h*week
     . Sprint Retrospective: .75h*week
-
++ SCrum team: 
+    . Product owner: la 1 nguoi/khach hang, tao product backlog (danh sach chuc nag
+    can phai lam)
+    . Scrum master: nguoi gioi ve scrum, huong dan moi thu ve scrum
+    . developer: len ke hoach cho sprin backlog
+            nam duoc thoi gian hoan thanh
+            thich nghi voi ke hoach hang ngay
++ Scrum event
+    . Planning: 
+        Tra loi cau hoi: lam gi va tai sao lai lam cv do
+        developer: tra loi cau hoi lam nhu the nao
 
 -->

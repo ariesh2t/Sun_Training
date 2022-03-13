@@ -30,7 +30,7 @@ Route::get('tintuc/{id?}/{slug?}.html' , function ($id=null, $slug=null) {
     ]
 )->name('admin/tin-tuc');
 
-html: <a href="<?php echo route('admin/tin-tuc', ['id'=>3, 'slug'=>'unicode'])?>">Show news</a>
+html: <a href="{{ route('admin/tin-tuc', ['id'=>3, 'slug'=>'unicode']) }}?>">Show news</a>
 
 Route::resource('category', CategoriesController::class);
 // Bo di 1 so method k dung den

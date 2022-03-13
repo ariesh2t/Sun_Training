@@ -19,14 +19,7 @@
         <h3>{{$product->product_name}}</h3>
     @endforeach
 
-* Scope
- * + Global scope: Ap dung cho tat ca cac model
- *
- * + Local scope: ap dung cho chi model
- * Model: public function scopeActive($query)
-    {
-        $query->where('active', 1);
-    }
+
 Controller:
 $users = App\Models\User::popular()->orWhere->active()->get();  orWhere -> or
 Co the truyen tham so vao phuong thuc
